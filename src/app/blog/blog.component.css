@@ -2,3 +2,23 @@ img {
     height: 70vh;
     object-fit:contain;
 }
+
+.quote {
+    font-family: 'Style Script', cursive;
+    color: #063842;
+    text-align: center;
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+.saidby {
+    font-family: 'Concert One', cursive;
+    color: #063842;
+    text-align: right;
+    font-style: italic;
+}
+
+p {
+    font-family: 'Teko', sans-serif;
+    color: #063842;
+}

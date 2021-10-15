@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
+import { CartComponent } from './cart/cart.component';
 import { ContentComponent } from './content/content.component';
 import { TravelsComponent } from './travels/travels.component';
 
@@ -10,6 +11,8 @@ const routes: Routes = [{
   path:"blog", component: BlogComponent
 }, {
   path:"travels", component: TravelsComponent
+}, {
+  path:"cart", component: CartComponent
 }];
 
 @NgModule({
