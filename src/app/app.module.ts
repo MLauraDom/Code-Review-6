@@ -8,7 +8,7 @@ import { ContentComponent } from './content/content.component';
 import { BlogComponent } from './blog/blog.component';
 import { TravelsComponent } from './travels/travels.component';
 import { FooterComponent } from './footer/footer.component';
-import { CartComponent } from './cart/cart.component';
+import { WasAddedComponent } from './was-added/was-added.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { CartComponent } from './cart/cart.component';
     BlogComponent,
     TravelsComponent,
     FooterComponent,
-    CartComponent
+    WasAddedComponent,
   ],
   imports: [
     BrowserModule,

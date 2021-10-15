@@ -8,7 +8,7 @@ export const trips = [
     img : "./assets/img/travel/egipt.JPG"
 },{
     destination : "Greece",
-    description : "Relax on the beautiful Coast of Santorini",
+    description : "Relax on the beautiful Coast of Santorini...",
     startDate : "24.10.2021",
     duration : "5 Days",
     price : 500,
@@ -36,7 +36,7 @@ export const trips = [
     img : "./assets/img/travel/hollywood.jpg"
 },{
     destination : "Machu Pichu",
-    description : "A trip full of adventure waits for you",
+    description : "A trip full of adventure waits for you...",
     startDate : "28.10.2021",
     duration : "14 Days",
     price : 2500,
@@ -50,14 +50,14 @@ export const trips = [
     img : "./assets/img/travel/london.jpg"
 },{
     destination : "Venetia",
-    description : "Your best Halloween Party in Venetia",
+    description : "Your best Halloween Party in Venetia!",
     startDate : "30.10.2021",
     duration : "3 Days",
     price : 250,
     img : "./assets/img/travel/venetia.jpg"
 },{
     destination : "Tokyo",
-    description : "Live your dream and become Yakuza",
+    description : "Live your dream and become Yakuza!",
     startDate : "31.10.2021",
     duration : "10 Days",
     price : 1500,
