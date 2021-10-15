@@ -1,0 +1,33 @@
+.navbody {
+    background-image: url("../../assets/img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-shadow: aquamarine 0.2em;
+}
+
+.q {
+padding: 10em 3em 1em 3em;
+font-family: 'Style Script', cursive;
+font-weight: bolder;
+color:#063842;
+text-shadow: 5px 5px 15px white;
+-webkit-text-stroke: 0.3px rgb(65, 137, 139);
+}
+
+.txt {
+    font-family: 'Concert One', cursive;
+    color: #063842;
+    text-shadow: 5px 5px 15px white;
+    -webkit-text-stroke: 0.2px rgb(162, 237, 240);
+    width: 60%;
+    padding: 0 3rem;
+}
+
+.logo1 {
+    width: 15%;
+}
+
+nav {
+    font-family: 'Concert One', cursive;
+}
