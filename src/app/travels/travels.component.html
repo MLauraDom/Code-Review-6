@@ -1,29 +1,23 @@
-<div class="container c1">
-    <div class="row row-cols row-cols-sm-2 row-cols-md-4 g-2" *ngFor="let trip of trips">
-        <div class="col">
-            <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="{{ trip.destination }}">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-header">
-                            <h5 class="card-title">{{ trip.destination }}</h5>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">{{ trip.description }}
-                            </p>
-                            <p class="card-text">Start date : {{ trip.startDate }}
-                            </p>
-                            <p class="card-text">Duration : {{ trip.duration }}
-                            </p>
-                        </div>
-                        <div class="card-footer text-end">
-                            <div class="btn btn-success text-white">
-                                <p class="h5">€ {{ trip.price }}</p>
-                            </div>
-                        </div>
-                    </div>
+<div class="c1">
+    <div class="p-2 text-center tit"><h1>Book your Trip now!</h1></div>
+    <div class="row row-cols row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let trip of trips">
+            <div class="card m-2" style="width:18rem;">
+                <img src="{{ trip.img }}" class="img-fluid rounded-start" alt="{{ trip.destination }}">
+            <div class="card-header">
+                <h5 class="card-title">{{ trip.destination }}</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ trip.description }}
+                </p>
+                <p class="card-text">Start date : {{ trip.startDate }}
+                </p>
+                <p class="card-text">Duration : {{ trip.duration }}
+                </p>
+            </div>
+            <div class="card-footer text-end">
+                <div class="btn btn-success text-white">
+                    <p class="h5">€ {{ trip.price }}</p>
                 </div>
             </div>
         </div>
