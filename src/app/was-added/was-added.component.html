@@ -1,1 +1,12 @@
-<p>was-added works!</p>
+<div class="wasadded">
+    <p class="h3">Your trip to {{trips.destination}} was added to your cart</p>
+
+    <div *ngIf="trip">
+        <h4>{{ trip.description }}</h4>
+        <p class="h5">Start date : {{ trip.startDate }}
+        </p>
+        <p class="h5">Duration : {{ trip.duration }}
+        </p>
+        <h3>Price: € {{ trip.price }}</h3>
+    </div>
+</div>
