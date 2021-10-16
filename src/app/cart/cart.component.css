@@ -1,0 +1,20 @@
+.c1 {
+    font-family: 'Teko', sans-serif;
+    color: #063842;
+    padding: 5vh 0;
+}
+
+img {
+    height:50%;
+    object-fit: cover;
+    height: 40vh;
+}
+
+.tit{
+    font-family: 'Style Script', cursive;
+}
+
+a {
+    text-decoration: none;
+    color:#063842;
+}

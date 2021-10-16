@@ -1,38 +1,16 @@
 <div class="c1">
     <div class="p-2 text-center tit">
-        <h1>My Cart</h1>
+        <h1>Travel Details</h1>
     </div>
-    <ng-template [ngIf]="summe < 200">
-        <div class="text-end">
-            <p class="h1 btn btn-succes">Total cost:<br /> € {{ summe }}</p>
-        </div>
-    </ng-template>
-
-    <ng-template [ngIf]="summe >= 200 && summe < 500">
-        <div class="text-end">
-            <p class="h1 btn btn-succes">Total cost:<br /> € {{ summe }} - 10% = € {{ summe * 0.9 }}</p>
-        </div>
-    </ng-template>
-    <ng-template [ngIf]="summe >= 500">
-        <div class="text-end">
-            <p class="h1">Total cost:<br /> € {{ summe }} - 20% = € {{ summe * 0.8 }}</p>
-        </div>
-    </ng-template>
-
-
-
-
-
-    <div class="row row-cols row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col" *ngFor="let trip of trips;">
-            <ng-template [ngIf]="trip.counter > 0">
-                <div class="card m-2" style="width:18rem;">
-
+    <div *ngIf="trip">
+        <div class="card m-3">
+            <div class="row g-0">
+                <div class="col-md-6">
                     <img src="{{ trip.img }}" class="img-fluid rounded-start" alt="{{ trip.destination }}">
+                </div>
+                <div class="col-md-6">
                     <div class="card-header">
-
                         <h5 class="card-title">{{ trip.destination }}</h5>
-
                     </div>
                     <div class="card-body">
                         <p class="card-text">{{ trip.description }}
@@ -44,12 +22,10 @@
                         <p class="card-text h3">Price: € {{ trip.price }}</p>
                     </div>
                     <div class="card-footer text-end">
-
-                        <p class="h5 btn btn-success text-white">{{ trip.counter }} X Booked</p>
-                        <p class="h5 btn btn-success text-white" (click)="plus(trip)">Add one more</p>
+                        <button class="h5 btn btn-success text-white" (click)="addToCart(trip)">Add to cart</button>
                     </div>
                 </div>
-            </ng-template>
+            </div>
         </div>
     </div>
 </div>

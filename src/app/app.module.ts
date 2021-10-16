@@ -9,6 +9,8 @@ import { BlogComponent } from './blog/blog.component';
 import { TravelsComponent } from './travels/travels.component';
 import { FooterComponent } from './footer/footer.component';
 import { WasAddedComponent } from './was-added/was-added.component';
+import { CartComponent } from './cart/cart.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { WasAddedComponent } from './was-added/was-added.component';
     TravelsComponent,
     FooterComponent,
     WasAddedComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

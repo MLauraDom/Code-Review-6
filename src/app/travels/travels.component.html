@@ -3,28 +3,29 @@
         <h1>Book your Trip now!</h1>
     </div>
     <div class="row row-cols row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col" *ngFor="let trip of trips;">
-            <div class="card m-2" style="width:18rem;">
-                
-                <img src="{{ trip.img }}" class="img-fluid rounded-start" alt="{{ trip.destination }}">
-                <div class="card-header">
+        <div class="col" *ngFor="let trip of trips; index as id">
+            <a routerLink="{{ id }}">
+                <div class="card m-2" style="width:18rem;">
+                    <img src="{{ trip.img }}" class="img-fluid rounded-start" alt="{{ trip.destination }}">
+                    <div class="card-header">
 
-                    <h5 class="card-title">{{ trip.destination }}</h5>
+                        <h5 class="card-title">{{ trip.destination }}</h5>
 
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{ trip.description }}
+                        </p>
+                        <p class="card-text">Start date : {{ trip.startDate }}
+                        </p>
+                        <p class="card-text">Duration : {{ trip.duration }}
+                        </p>
+                        <p class="card-text h3">Price: € {{ trip.price }}</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <p class="h5 btn btn-success text-white">Read more</p>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-text">{{ trip.description }}
-                    </p>
-                    <p class="card-text">Start date : {{ trip.startDate }}
-                    </p>
-                    <p class="card-text">Duration : {{ trip.duration }}
-                    </p>
-                    <p class="card-text h3">Price: € {{ trip.price }}</p>
-                </div>
-                <div class="card-footer text-end">
-                        <p class="h5 btn btn-success text-white" (click)="plus(trip)">Add to Cart</p>
-                </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

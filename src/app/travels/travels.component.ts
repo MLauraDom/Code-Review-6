@@ -12,24 +12,8 @@ import { CartService } from '../cart.service';
 export class TravelsComponent implements OnInit {
   trips = trips;
 
-  constructor() { }
-  //private route: ActivatedRoute, private CS: CartService
-  /*addToCart(trip: any) {
-    alert("Trip booked");
-    this.CS.addToCart(trip);
-  };*/
+  constructor(private route:ActivatedRoute) { }
 
-  plus(a : any) {
-    a.counter ++;
-  };
-
-  /*pushthis.route.paramMap.subscribe(params => {
-    let id: any = params.get("id");
-    this.trip = trips[id];
-    console.log(this.trip);*/
-  ngOnInit(): void {}
-
- 
+  ngOnInit(): void {
   }
-
-
+}

@@ -18,7 +18,10 @@ img {
     font-style: italic;
 }
 
-p {
+.tek {
     font-family: 'Teko', sans-serif;
     color: #063842;
+}
+.tit {
+    font-family: 'Style Script', cursive;
 }

@@ -1,5 +1,10 @@
 .cont1 {
-    padding: 5vh 10vw;
+    padding: 2em;
     font-family: 'Style Script', cursive;
     color: #063842;
+}
+.tek {
+    font-family: 'Teko', sans-serif;
+    color: #063842;
+    padding: 1em;
 }

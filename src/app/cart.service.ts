@@ -9,8 +9,12 @@ export class CartService {
   constructor() { }
 
   addToCart(trip: any) {
+    if(trip.counter==0){
     this.bookings.push(trip);
-  }
+    trip.counter = 1;
+  } else {
+    trip.counter ++;
+  }}
 
   getItems () {
     return this.bookings;

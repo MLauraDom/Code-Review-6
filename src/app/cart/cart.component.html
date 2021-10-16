@@ -1,0 +1,59 @@
+<div class="c1">
+    <ng-template [ngIf]="summe < 200">
+        <div class="text-end">
+            <p class="h1">Total cost: € {{ summe }}</p>
+        </div>
+    </ng-template>
+
+    <ng-template [ngIf]="summe >= 200 && summe < 500">
+        <div class="text-end">
+            <p class="h1">Price: € {{ summe }}<br>- 10%: - € {{ summe*0.1 }}<br />Total cost = € {{ summe * 0.9 }}</p>
+        </div>
+    </ng-template>
+    <ng-template [ngIf]="summe >= 500">
+        <div class="text-end">
+            <p class="h1">Total cost: € {{ summe }}<br /> - 20% : -€ {{ summe*0.2 }} <br />= € {{ summe * 0.8 }}</p>
+        </div>
+    </ng-template>
+    <div class="row row-cols row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let booking of bookings; index as id">
+            <div class="card m-2" style="width:18rem;">
+                <img src="{{ booking.img }}" class="img-fluid rounded-start" alt="{{ booking.destination }}">
+                <div class="card-header">
+
+                    <h5 class="card-title">{{ booking.destination }}</h5>
+
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ booking.description }}
+                    </p>
+                    <p class="card-text">Start date : {{ booking.startDate }}
+                    </p>
+                    <p class="card-text">Duration : {{ booking.duration }}
+                    </p>
+                    <p class="card-text h3">Price: € {{ booking.price }}</p>
+                </div>
+                <div class="card-footer text-end">
+                    <p class="h5 btn btn-success text-white">{{ booking.counter }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="bookings.lenght>0">
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+            <div>
+                <label for="name">
+                    Name
+                </label><br />
+                <input id="name" type="text" formControlName="name">
+            </div>
+            <div>
+                <label for="address">
+                    Address
+                </label><br />
+                <input id="address" type="text" formControlName="address">
+            </div>
+            <button class="button" type="submit">Purchase</button>
+        </form>
+    </div>
+</div>

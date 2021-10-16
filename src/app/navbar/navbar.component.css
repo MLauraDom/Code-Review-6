@@ -2,7 +2,7 @@
     background-image: url("../../assets/img/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
     text-shadow: aquamarine 0.2em;
     color: #abe6f1;
     text-shadow: 5px 5px 10px #063842;
@@ -10,7 +10,7 @@
 }
 
 .q {
-    padding: 10em 3em 1em 3em;
+    padding: 5em 3em 1em 3em;
     font-family: 'Style Script', cursive;
     font-weight: bolder;
     color: #abe6f1;
@@ -23,7 +23,7 @@
     color: #abe6f1;
     text-shadow: 5px 5px 10px #063842;
     -webkit-text-stroke: 0.3px #063842;
-    width: 60%;
+    width: 80%;
     padding: 0 3rem;
 }
 
