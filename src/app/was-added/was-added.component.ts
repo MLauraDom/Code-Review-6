@@ -10,12 +10,11 @@ import { CartService } from '../cart.service';
 export class WasAddedComponent implements OnInit {
   trips = trips;
   summe : number = 0;
-  //route = new ActivatedRoute(); private route: ActivatedRoute, private CS: CartService
-  constructor() { }
-  /*addToCart(trip: any) {
-    alert("Trip booked");
-    this.CS.addToCart(trip);
-  }*/
+
+  constructor() { } 
+
+
+
   plus(a:any) {
     a.counter ++;
   }
@@ -32,12 +31,6 @@ export class WasAddedComponent implements OnInit {
    } else {
     this.summe = this.summe * 0.9;
    }
-  }
-}*/
-/* this.route.paramMap.subscribe(params => {
-      let id: any = params.get("id");
-      this.trip = trips[id];
-      console.log(this.trip);
-    });}
-*/
+  }*/
+
   }}
