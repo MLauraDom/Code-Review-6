@@ -1,34 +1,55 @@
-
 <div class="c1">
     <div class="p-2 text-center tit">
         <h1>My Cart</h1>
-        <div class="text-end">><p class="h1 btn btn-succes">€ {{ summe }}</p></div>
     </div>
+    <ng-template [ngIf]="summe < 200">
+        <div class="text-end">
+            <p class="h1 btn btn-succes">Total cost:<br /> € {{ summe }}</p>
+        </div>
+    </ng-template>
+
+    <ng-template [ngIf]="summe >= 200 && summe < 500">
+        <div class="text-end">
+            <p class="h1 btn btn-succes">Total cost:<br /> € {{ summe }} - 10% = € {{ summe * 0.9 }}</p>
+        </div>
+    </ng-template>
+    <ng-template [ngIf]="summe >= 500">
+        <div class="text-end">
+            <p class="h1">Total cost:<br /> € {{ summe }} - 20% = € {{ summe * 0.8 }}</p>
+        </div>
+    </ng-template>
+
+
+
+
+
     <div class="row row-cols row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col" *ngFor="let trip of trips;">
-            <div class="card m-2" style="width:18rem;" *ngIf="trip.counter > 0">
-                
-                <img src="{{ trip.img }}" class="img-fluid rounded-start" alt="{{ trip.destination }}">
-                <div class="card-header">
+            <ng-template [ngIf]="trip.counter > 0">
+                <div class="card m-2" style="width:18rem;">
 
-                    <h5 class="card-title">{{ trip.destination }}</h5>
+                    <img src="{{ trip.img }}" class="img-fluid rounded-start" alt="{{ trip.destination }}">
+                    <div class="card-header">
 
-                </div>
-                <div class="card-body">
-                    <p class="card-text">{{ trip.description }}
-                    </p>
-                    <p class="card-text">Start date : {{ trip.startDate }}
-                    </p>
-                    <p class="card-text">Duration : {{ trip.duration }}
-                    </p>
-                    <p class="card-text h3">Price: € {{ trip.price }}</p>
-                </div>
-                <div class="card-footer text-end">
+                        <h5 class="card-title">{{ trip.destination }}</h5>
 
-                    <p class="h5 btn btn-success text-white">{{ trip.counter }} X Booked</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{ trip.description }}
+                        </p>
+                        <p class="card-text">Start date : {{ trip.startDate }}
+                        </p>
+                        <p class="card-text">Duration : {{ trip.duration }}
+                        </p>
+                        <p class="card-text h3">Price: € {{ trip.price }}</p>
+                    </div>
+                    <div class="card-footer text-end">
+
+                        <p class="h5 btn btn-success text-white">{{ trip.counter }} X Booked</p>
                         <p class="h5 btn btn-success text-white" (click)="plus(trip)">Add one more</p>
+                    </div>
                 </div>
-            </div>
+            </ng-template>
         </div>
     </div>
 </div>

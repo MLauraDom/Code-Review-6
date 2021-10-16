@@ -26,11 +26,18 @@ export class WasAddedComponent implements OnInit {
         this.summe += val.price;
       }
     }
+   /* if(this.summe>200){
+   if(this.summe>500){
+     this.summe = this.summe * 0.8;
+   } else {
+    this.summe = this.summe * 0.9;
+   }
   }
+}*/
 /* this.route.paramMap.subscribe(params => {
       let id: any = params.get("id");
       this.trip = trips[id];
       console.log(this.trip);
     });}
 */
-  }
+  }}
