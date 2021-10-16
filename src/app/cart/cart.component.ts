@@ -32,11 +32,13 @@ export class CartComponent implements OnInit {
     console.warn('Your order has been submitted', customerData);
     if (this.summe>0){
     alert("Thank you for your Booking, " + customerData.name);
-    } else {
-    alert("You didn`t booked a trip yet!");
+    };
+    if (this.checkoutForm.value == "") {
+      alert("Please enter your Indormation before you click the submit button!")
     }
     this.bookings = this.CS.clearCart();
     this.checkoutForm.reset();
+    this.summe = 0;
   }
 }
 
