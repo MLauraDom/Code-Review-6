@@ -8,20 +8,29 @@ import { CartService } from '../cart.service';
   styleUrls: ['./was-added.component.css']
 })
 export class WasAddedComponent implements OnInit {
-  trip: any;
-  //route = new ActivatedRoute();
-  constructor(private route: ActivatedRoute, private CS: CartService) { }
- 
-  addToCart(trip: any) {
+  trips = trips;
+  summe : number = 0;
+  //route = new ActivatedRoute(); private route: ActivatedRoute, private CS: CartService
+  constructor() { }
+  /*addToCart(trip: any) {
     alert("Trip booked");
     this.CS.addToCart(trip);
+  }*/
+  plus(a:any) {
+    a.counter ++;
   }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+    for (let val of trips) {
+      if (val.counter>0) {
+        this.summe += val.price;
+      }
+    }
+  }
+/* this.route.paramMap.subscribe(params => {
       let id: any = params.get("id");
       this.trip = trips[id];
-    });
+      console.log(this.trip);
+    });}
+*/
   }
-
-}

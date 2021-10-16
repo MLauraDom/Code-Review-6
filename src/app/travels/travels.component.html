@@ -3,8 +3,7 @@
         <h1>Book your Trip now!</h1>
     </div>
     <div class="row row-cols row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col" *ngFor="let trip of trips;index as id">
-            <a routerLink="{{ id }}">
+        <div class="col" *ngFor="let trip of trips;">
             <div class="card m-2" style="width:18rem;">
                 
                 <img src="{{ trip.img }}" class="img-fluid rounded-start" alt="{{ trip.destination }}">
@@ -23,13 +22,9 @@
                     <p class="card-text h3">Price: € {{ trip.price }}</p>
                 </div>
                 <div class="card-footer text-end">
-                    <div class="btn btn-success text-white">
-
-                        <p class="h5">Add to Cart</p>
-
-                    </div>
+                        <p class="h5 btn btn-success text-white" (click)="plus(trip)">Add to Cart</p>
                 </div>
-            </div></a>
+            </div>
         </div>
     </div>
 </div>

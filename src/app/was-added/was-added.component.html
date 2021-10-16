@@ -1,12 +1,34 @@
-<div class="wasadded">
-    <p class="h3">Your trip to {{trips.destination}} was added to your cart</p>
 
-    <div *ngIf="trip">
-        <h4>{{ trip.description }}</h4>
-        <p class="h5">Start date : {{ trip.startDate }}
-        </p>
-        <p class="h5">Duration : {{ trip.duration }}
-        </p>
-        <h3>Price: € {{ trip.price }}</h3>
+<div class="c1">
+    <div class="p-2 text-center tit">
+        <h1>My Cart</h1>
+        <div class="text-end">><p class="h1 btn btn-succes">€ {{ summe }}</p></div>
+    </div>
+    <div class="row row-cols row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let trip of trips;">
+            <div class="card m-2" style="width:18rem;" *ngIf="trip.counter > 0">
+                
+                <img src="{{ trip.img }}" class="img-fluid rounded-start" alt="{{ trip.destination }}">
+                <div class="card-header">
+
+                    <h5 class="card-title">{{ trip.destination }}</h5>
+
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ trip.description }}
+                    </p>
+                    <p class="card-text">Start date : {{ trip.startDate }}
+                    </p>
+                    <p class="card-text">Duration : {{ trip.duration }}
+                    </p>
+                    <p class="card-text h3">Price: € {{ trip.price }}</p>
+                </div>
+                <div class="card-footer text-end">
+
+                    <p class="h5 btn btn-success text-white">{{ trip.counter }} X Booked</p>
+                        <p class="h5 btn btn-success text-white" (click)="plus(trip)">Add one more</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

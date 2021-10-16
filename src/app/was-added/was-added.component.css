@@ -1,10 +1,20 @@
-.wasadded {
-    background-image: url("{{ trip.img }}");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    text-shadow: aquamarine 0.2em;
-    color: #abe6f1;
-    text-shadow: 5px 5px 10px #063842;
-    -webkit-text-stroke: 0.3px #063842;
+.c1 {
+    font-family: 'Teko', sans-serif;
+    color: #063842;
+    padding: 5vh 0;
+}
+
+img {
+    height:50%;
+    object-fit: cover;
+    height: 40vh;
+}
+
+.tit{
+    font-family: 'Style Script', cursive;
+}
+
+a {
+    text-decoration: none;
+    color:#063842;
 }

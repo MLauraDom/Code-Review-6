@@ -8,8 +8,13 @@ import { trips } from "../trips";
 })
 export class TravelsComponent implements OnInit {
   trips = trips;
+
   constructor() { }
 
+  plus(a:any) {
+    a.counter ++;
+  }
+  
   ngOnInit(): void {
   }
 
