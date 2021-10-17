@@ -21,9 +21,16 @@
                         </p>
                         <p class="card-text h3">Price: € {{ trip.price }}</p>
                     </div>
-                    <div class="card-footer text-end">
-                        <button class="h5 btn btn-success text-white" (click)="addToCart(trip)">Add to cart</button>
+                    <ng-template [ngIf]="trip.counter == 0">
+                        <div class="card-footer text-end">
+                            <button class="h5 btn btn-success text-white" (click)="addToCart(trip)">Add to cart</button>
+                        </div>
+                    </ng-template>
+                    <ng-template [ngIf]="trip.counter > 0">
+                        <div class="card-footer text-end">
+                        <button class="h5 btn btn-success text-white" (click)="addToCart(trip)">{{ trip.counter }} x Booked</button>
                     </div>
+                    </ng-template>
                 </div>
             </div>
         </div>

@@ -1,10 +1,14 @@
 <div class="c1">
-    <ng-template [ngIf]="summe < 200">
+    <ng-template [ngIf]="summe == 0">
+        <div class="text-end">
+            <p class="h1">Your Cart is empty</p>
+        </div>
+    </ng-template>
+    <ng-template [ngIf]="summe < 200 && summe > 0">
         <div class="text-end">
             <p class="h1">Total cost: € {{ summe }}</p>
         </div>
     </ng-template>
-
     <ng-template [ngIf]="summe >= 200 && summe < 500">
         <div class="text-end">
             <p class="h1">Price: € {{ summe }}<br>- 10%: - € {{ summe*0.1 }}<br />Total cost = € {{ summe * 0.9 }}</p>
@@ -12,7 +16,7 @@
     </ng-template>
     <ng-template [ngIf]="summe >= 500">
         <div class="text-end">
-            <p class="h1">Total cost: € {{ summe }}<br /> - 20% : -€ {{ summe*0.2 }} <br />= € {{ summe * 0.8 }}</p>
+            <p class="h1">Price € {{ summe }}<br /> - 20% : -€ {{ summe*0.2 }} <br />Total cost = € {{ summe * 0.8 }}</p>
         </div>
     </ng-template>
     <div class="row row-cols row-cols-sm-2 row-cols-md-3 g-3">
@@ -34,7 +38,7 @@
                     <p class="card-text h3">Price: € {{ booking.price }}</p>
                 </div>
                 <div class="card-footer text-end">
-                    <p class="h5 btn btn-success text-white">{{ booking.counter }}</p>
+                    <p class="h5 btn btn-success text-white">{{ booking.counter }} x Booked</p>
                 </div>
             </div>
         </div>

@@ -30,15 +30,14 @@ export class CartComponent implements OnInit {
 
   onSubmit(customerData:any) {
     console.warn('Your order has been submitted', customerData);
-    if (this.summe>0){
-    alert("Thank you for your Booking, " + customerData.name);
-    };
-    if (this.checkoutForm.value == "") {
-      alert("Please enter your Indormation before you click the submit button!")
-    }
-    this.bookings = this.CS.clearCart();
-    this.checkoutForm.reset();
-    this.summe = 0;
+    if (customerData.name == '' || customerData.address =='') {
+      alert("Please enter your Informations before you purchase!")
+    } else {
+      alert("Thank you for your Booking, " +  customerData.name + " !");
+      this.bookings = this.CS.clearCart();
+      this.checkoutForm.reset();
+      this.summe = 0;
+      };
   }
 }
 

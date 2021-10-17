@@ -17,7 +17,7 @@ export class WasAddedComponent implements OnInit {
   constructor(private route : ActivatedRoute, private CS: CartService) { } 
 
   addToCart(trip:any) {
-    alert("Your Trip to " + trip.destination + " was booked");
+    alert("Your Trip to " + trip.destination + " was booked!");
     this.CS.addToCart(trip);
   }
 
