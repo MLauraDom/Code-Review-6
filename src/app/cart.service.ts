@@ -21,6 +21,9 @@ export class CartService {
   }
 
   clearCart() {
+    for (let val of this.bookings) {
+      val.counter = 0;
+    }
     this.bookings = [];
     return this.bookings;
   }

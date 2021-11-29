@@ -2,11 +2,12 @@
     background-image: url("../../assets/img/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position:top;
     height: 80vh;
     text-shadow: aquamarine 0.2em;
     color: #abe6f1;
     text-shadow: 5px 5px 10px #063842;
-    -webkit-text-stroke: 0.3px #063842;
+    -webkit-text-stroke: 0.3px #ffffff;
 }
 
 .q {
